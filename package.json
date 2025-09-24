@@ -1,0 +1,20 @@
+{
+  "name": "secure-wipe-cert-app",
+  "version": "1.0.0",
+  "description": "Electron UI mockup for secure data wiping + certificate generation",
+  "main": "certiwipe.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^38.1.2"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "html2pdf.js": "^0.12.1",
+    "lucide": "^0.544.0",
+    "path": "^0.12.7"
+  }
+}

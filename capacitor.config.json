@@ -1,0 +1,6 @@
+{
+  "appId": "com.securewipe.app",
+  "appName": "CertiWipe",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}    

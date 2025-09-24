@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CertiWipe</title>
+  <link rel="stylesheet" href="./certiwipe.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- App Header -->
+  <header class="app-header">
+    <i data-lucide="shield" class="header-icon"></i>
+    <span>CertiWipe</span>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="welcome">
+      <h2>Welcome to <span>CertiWipe</span></h2>
+      <p>Securely clean & manage your drives</p>
+    </div>
+
+    <div class="grid" id="cardGrid">
+      <div class="card" id="startBtn">🧹 <h3>Start Wipe</h3><p>Erase securely with one click</p></div>
+    </div>
+  </div>
+
+  <!-- Purge Warning Modal -->
+  <div id="purgeModal" class="modal">
+    <div class="modal-content">
+      <h2>Warning!</h2>
+      <p>All files on the selected drive will be deleted permanently. Continue?</p>
+      <div class="modal-buttons">
+        <button id="cancelPurge">Cancel</button>
+        <button id="confirmPurge" class="purgeConfirm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <button><i data-lucide="home"></i></button>
+    <button><i data-lucide="hard-drive"></i></button>
+    <button><i data-lucide="settings"></i></button>
+  </nav>
+
+  <script src="certiwipe.js"></script>
+  <script>
+    // Initialize Lucide icons after the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

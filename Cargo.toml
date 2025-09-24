@@ -1,0 +1,27 @@
+[package]
+name = "certiwipe"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <you@example.com>"]
+description = "Secure wipe and certificate generation app"
+license = "MIT"
+
+# Enable binary output
+[[bin]]
+name = "certiwipe"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+ring = "0.16"
+base64 = "0.21"
+printpdf = "0.6"
+serde_json = "1.0.145"
+
+[profile.release]
+opt-level = "z"          # optimize for size (optional)
+lto = true               # link-time optimization
+debug = false            # remove debug info
+strip = true             # strip symbols
